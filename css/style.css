@@ -1,4 +1,84 @@
-@font-face {
+.slideshow { 
+        position:relative; /*Make the slideshow container  position:relative and make the sub elements absolute to position the sub element absolute to the container*/
+        height:320px; /*The slide show height*/
+        overflow:hidden;
+    }
+    .slideshow div {
+        position:absolute; 
+        top:0px;;
+        left:0;
+        z-index:8;
+    }
+    .slideshow div img
+    {
+        width:600px; /*The image slide show width*/
+        height:320px; /*The image slide show height*/
+    }
+    .slideshow div.active {
+        z-index:10;
+    }
+    .slideshow div.lastactive {
+        z-index:9;
+    }* {
+  box-sizing:border-box
+}
+h2 {
+  text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+/* Ẩn các slider */
+.mySlides {
+    display: none;
+}
+/* Định dạng nội dung Caption */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+ 
+/* định dạng các chấm chuyển đổi các slide */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/* khi được hover, active đổi màu nền */
+.active, .dot:hover {
+  background-color: #717171;
+}
+ 
+/* Thêm hiệu ứng khi chuyển đổi các slide */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+ 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}@font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -871,7 +951,7 @@ display: block; margin-left: auto; margin-right: auto;
 
 .js .animate-box {
   opacity: 0;
-}
+ĐỌC THÊMĐỌC THÊMĐỌC THÊMĐỌC THÊM}
 
 #fh5co-wrapper {
   overflow-x: hidden;
